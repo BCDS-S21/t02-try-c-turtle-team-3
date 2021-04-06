@@ -20,11 +20,11 @@ int main() {
 
   cout << "Hello," << yname;
 
-	scr.bgcolor({ "white" });
+	scr.bgcolor({ "light blue" });
 	ct::Turtle turtle(scr);
 
 	turtle.speed(ct::TS_FASTEST);
-  
+
   scr.tracer(0);
 
 	turtle.fillcolor({ "yellow" });
