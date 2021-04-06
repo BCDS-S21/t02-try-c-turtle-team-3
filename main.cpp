@@ -15,19 +15,52 @@ int main() {
 	ct::Turtle turtle(scr);
 
 	turtle.speed(ct::TS_FASTEST);
-	turtle.fillcolor({ "purple" });
+  scr.tracer(0);
+
+	turtle.fillcolor({ "yellow" });
 	turtle.begin_fill();
 	
-  for (float i = 0; i < 70; i++) {
-        turtle.forward(2);
-        turtle.right(5);
-        turtle.forward(2); 
+  // middle of flower
+  turtle.penup();
+  turtle.goTo(0, 50);
+  turtle.pendown();
+  for (float i = 0; i < 360; i++) {
+        turtle.forward(1);
+        turtle.right(1); }
+  turtle.end_fill();
+
+ // loop for petals
+  
+  turtle.penup();
+  turtle.goTo(-20,100);
+
+  for (float i = 0; i < 300; i++) { 
+        
+        turtle.fillcolor({ "pink" });
+        turtle.begin_fill();
+
+        for (float i = 0; i < 180; i++) {
+        turtle.pendown();
+        
+        turtle.forward(1);
+        turtle.right(2); } 
+        turtle.end_fill();
+
+        turtle.penup();
+        turtle.forward(40);
+        turtle.right(20);
         }
-  
-  //for (float i = 0; i < 50; i++) {
-        //turtle.forward(3);
-        //turtle.right(2);
-  
+
+  turtle.hideturtle();
+
+  turtle.goTo(120, 50);
+
+  turtle.pendown();
+  turtle.fillcolor({"black"});
+  turtle.begin_fill();
+  turtle.write("Aren't you glad it's spring!");
+  turtle.end_fill();
+
   //for (float i = 0; i < 2; i++) {
         //turtle.forward(1);
         //turtle.right(2);
@@ -37,9 +70,17 @@ int main() {
       //turtle.forward(1);
       //turtle.right(1);
 
+      
+    //for (int i = 0;i < 7; i++){ 
+      //int z = 0 // int k = 100
+      //turtle.goTo(z,k)
+      //for (float i = 0; i < 180; i++) {
+        //turtle.forward(1);
+        //turtle.right(2); }}
 
-    turtle.end_fill();
 
+    //turtle.end_fill();
+  
 	scr.exitonclick();  //exists graphics screen
 	return 0;
 }
