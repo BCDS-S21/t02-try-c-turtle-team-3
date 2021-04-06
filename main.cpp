@@ -18,7 +18,7 @@ int main() {
   
   cin >> yname;
 
-  cout << "Hello," << yname;
+  cout << "Hello, " << yname << endl;
 
 	scr.bgcolor({ "light blue" });
 	ct::Turtle turtle(scr);
@@ -63,7 +63,7 @@ int main() {
 
   turtle.hideturtle();
 
-  turtle.goTo(100, 50);
+  turtle.goTo(85, 50);
 
   turtle.pendown();
   turtle.fillcolor({"black"});
